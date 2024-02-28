@@ -1,4 +1,24 @@
 
+.nav_popup{
+    display: none;
+    display: flex;
+    flex-flow: column;
+    background-color: #b1b1b1;
+    height: 100vh;
+}
+.nav_popup .title {
+    float: right;
+    width: 500px; background: #a5a5a5;
+    opacity: 0.8;
+    height: 100vh;
+}
+.nav_popup .title img{width: 50px;}
+.nav_popup .title a {
+    display: flex; flex-flow: column;
+    align-items: center;
+    font-size: 5rem; color: #fff;  text-align: right;
+    margin-bottom: 80px;
+}
 
 header {
     display: flex; flex-flow: row nowrap; justify-content: space-between;
@@ -18,7 +38,9 @@ main {
     background: #000; display: flex; background-size: cover; background-position:bottom; flex-flow: column nowrap; height: 100vh;
     
 }
-main .first_menu {margin: 0 auto; position: relative;   height: 100vh; }
+main .first_menu {
+    margin: 0 auto; position: relative;   height: 100vh; 
+}
 .video video {position: absolute; height: 100vh; width: 100%;} 
 main .first_menu h2{
     font-size: 4.063rem; color: #fff; margin-bottom: 90px;
@@ -27,121 +49,19 @@ main .first_menu h2{
 main .first_menu nav {display: flex;
     flex-flow: column nowrap; align-items: center;
 }
-main .first_menu nav a {font-size: 1.875rem; color: #fff; padding-bottom: 70px;}
-
+main .first_menu nav a {
+    font-size: 1.875rem; display: flex;
+    color: #a5a5a5; padding-bottom: 70px;}
+main .first_menu nav a:hover {
+    color: #fff; font-size: 2.5rem; transition: 0.5s;
+}
+main .first_menu nav a img {
+    position: relative; top: 3px; left: 5px;
+}
 main .first_menu .go  { }
 main .first_menu .go span {
     color: #fff; font-size: 3.5rem; border: 1px solid white;border-radius: 50%;
     padding: 10px 30px; 
-}
-main .second {
-    background-image: url(../images/a-black-wall-with-a-black-door-wallpaper-background-for-desktop_455711-2186.avif); background-size: cover;  
-    background-attachment:fixed ;
-}
-main .second .contents {
-    height: 100vh; 
-    display: flex ; flex-flow: row nowrap; justify-content: space-between;
-    position: relative;
-}
-main .second .contents .left{
-    margin-top: 460px
-}
-main .second .contents .left h1 {
-    margin-left: 200px;
-    font-size: 5rem;
-    color: #fff;
-}
-main .second .contents .right {
-    display: flex; flex-flow: column nowrap;
-    margin-top: 200px
-}
-main .second .contents .images .row { 
-    position: absolute; left: 800px; top: 20%;
-    height: 650px;
-}
-main .second .contents .images .column {
-    position: absolute; top: 52%; width: 800px;
-    left: 50%;
-}
-main .second .contents .right .right_top {
-    display: flex; flex-flow: row nowrap; 
-    
-}
-main .second .contents .right .right_top .top_right{display: flex;flex-flow: column nowrap; }
-main .second .contents .right .right_top .right_img{
-    display: flex;flex-flow: column nowrap; 
-    font-size: 3rem; margin-right: 150px;
-}
-main .second .contents .right .right_top .right_img i{color: #fff;}
-main .second .contents .right .right_top .right_img i:nth-child(2){
-    margin-top: 50px;
-}
-main .second .contents .right .right_top .right_img i:nth-child(3){
-    margin-top: 50px; 
-}
-main .second .contents .right .right_top span {
-    font-size: 3rem; padding-bottom: 40px;
-    color: #fff;
-}
-main .second .contents .right .right_top .name {}
-main .second .contents .right .right_top .birthday {}
-main .second .contents .right .right_top .home{}
-main .second .contents .right .right_bottom {}
-main .second .contents .right .right_bottom .content {display: flex; flex-flow: column nowrap; margin-right: 130px;
-}
-main .second .contents .right .right_bottom .content .first {
-    font-size: 2.5rem; margin-top: 40px;
-    margin-bottom: 40px; color: #fff;
-}
-main .second .contents .right .right_bottom .content .two {
-    font-weight: 800; color: #fff;
-}
-main .third {
-    background: #000;
-    width: 100%; height: 100vh;
-}
-main .third {position: relative;}
-main .third .contents {
-    height: 100vh; position: relative; text-align: center;
-}
-main .third  video {
-    width: 100%; height: 100vh;
-    position: absolute; left: 0; 
-}
-main .third .contents h1 {
-    padding-top: 150px;
-    font-weight: 800; font-size: 7rem;
-    background:linear-gradient(to right,#fff,#bdbdbd,#000,#fff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    animation: text_bg 10s linear infinite;
-}
-main .third .contents img {
-    width: 100px; margin: 0 auto;   padding-bottom: 20px;
-}
-main .third .contents .skill_all {
-    width: 100%;
-    position: absolute;
-    opacity: 0.73;
-    background-color: #f1f1f1; bottom: 0;
-    display: flex; flex-flow: row nowrap; justify-content: space-around;
-}
-main .third .contents h2 {font-size: 3rem; font-weight: bold;
-    margin-top: 10px; margin-bottom: 50px;
-}
-@keyframes text_bg {
-    0%{background-position-x: 100% ;}
-    100%{background-position-x: 400% ;}
-}
-main .third .contents .skill_all .design {
-    display: flex ; flex-flow: column nowrap;
-}
-main .third .contents .skill_all .prontend {display: flex ; flex-flow: column nowrap;}
-main .third .contents .skill_all .prontend img:nth-child(4) { width: 250px;}
-main .third .contents .skill_all .repository {display: flex ; flex-flow: column nowrap; }
-main .third .contents .skill_all .repository img:nth-child(3){
-    padding-top: 100px; width: 200px;
 }
 
 
