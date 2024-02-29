@@ -1,31 +1,36 @@
 
 .nav_popup{
-    display: none;
+    width: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
     display: flex;
     flex-flow: column;
-    background-color:rgba(0, 0, 0, 0.5);
     height: 100vh;
 }
 .nav_popup .title {
     float: right;
-    width: 500px; background: #a5a5a5;
+    width: 400px; background: #252525;
     opacity: 0.8;
     height: 100vh;
 }
-.nav_popup .title img{width: 50px;}
+.nav_popup .title img{
+    width: 35px; position: relative; top: 20px; left: -150px;
+}
 .nav_popup .title a {
     display: flex; flex-flow: column;
     align-items: center;
-    font-size: 5rem; color: #fff;  text-align: right;
+    font-size: 4rem; color: #a5a5a5;  text-align: right;
     margin-bottom: 80px;
 }
-
+.nav_popup .title a:hover{
+    color: #fff;
+}
 header {
     display: flex; flex-flow: row nowrap; justify-content: space-between;
     background: rgba(0, 0, 0, 0.5);
     position: fixed; width: 100%; 
     left: 0; top: 0; z-index: 999;
-    
 }
 header h1 {
     margin-left: 40px ; margin-bottom: 10px;
@@ -43,25 +48,39 @@ main .first_menu {
 }
 .video video {position: absolute; height: 100vh; width: 100%;} 
 main .first_menu h2{
-    font-size: 4.063rem; color: #fff; margin-bottom: 90px;
-    margin-top: 200px;
+    font-size: 3.063rem; color: #fff; margin-bottom: 90px;
+    margin-top: 200px; text-align: center;
+    transition: transform 0.3s ease-out;
+} 
+
+
+@keyframes typing {
+    from {
+        width: 0; 
+    }
+    to {
+        width: 100%;
+    }
 }
+
 main .first_menu nav {display: flex;
     flex-flow: column nowrap; align-items: center;
 }
 main .first_menu nav a {
+    filter: blur(2px);
     font-size: 1.875rem; display: flex;
     color: #a5a5a5; padding-bottom: 70px;}
-main .first_menu nav a:hover {
-    color: #fff; font-size: 2.5rem; transition: 0.5s;
-}
-main .first_menu nav a img {
-    position: relative; top: 3px; left: 5px;
-}
-main .first_menu .go  { }
-main .first_menu .go span {
-    color: #fff; font-size: 3.5rem; border: 1px solid white;border-radius: 50%;
-    padding: 10px 30px; 
+    main .first_menu nav a:hover {
+        color: #fff; font-size: 2.5rem; transition: 0.5s;
+        filter: none;
+    }
+    main .first_menu nav a img {
+        position: relative; top: 3px; left: 5px;
+    }
+    main .first_menu .go  { }
+    main .first_menu .go span {
+        color: #fff; font-size: 3.5rem; border: 1px solid white;border-radius: 50%;
+        padding: 10px 30px; 
 }
 
 main .about {
@@ -69,16 +88,73 @@ main .about {
     height: 40vh;
 }
 main .about h1 {
-    display: inline;
-    padding-top: 10     0px; font-size: 3rem;
-    border-bottom:3px solid #a5a5a5 ;
+    margin-top: 50px;
+}
+main .about h1 img {
+    position: relative; right: 20px;
+    width: 400px; transition: 4s;
+}
+main .about h1 img:hover {
+    transform: rotateY(360deg)
 }
 main .about .text{ 
     display: flex; padding: 80px 0; 
     flex-flow: row nowrap; justify-content: space-around;
 }
 
+main .about .text h2 {
+    font-size: 3rem;
+    border-bottom: 3px solid #a5a5a5; padding-bottom: 40px;
+}
+main .about .text p {
+    font-size: 2rem;
+    padding-top: 40px;
+}
 
+
+main .skill{
+    width: 100%;
+    background: #a5a5   ;
+    z-index: 999;
+    position: relative;
+    margin-top: 250px;
+    padding-bottom: 100px;
+}
+main .skill img {float: right;}
+main .skill h1 {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    
+    color: #a5a5a5;
+}
+main .skill .side {
+    right: 870px;
+    position: absolute;
+    top: 5px;
+    color: #ffff;
+}
+main .skill p {
+    color: #fff;
+}
+
+main .skill .skill_contents .img_box{
+    display: flex; flex-flow: row wrap;
+    justify-content: center;
+}
+main .skill .skill_contents img{
+    width: 150px;
+    height: 150px;
+}
+main .skill .skill_contents img {
+    margin-right: 200px;
+    margin-top: 100px;
+    
+}
+main .skill .skill_contents img:nth-of-type(2){
+    width: 450px;
+
+}
 
 
 
@@ -97,7 +173,7 @@ main .about .text{
 .circle{
     width: 50px; height: 50px;
     border-radius: 50%;
-    border: 1px solid #fff;
+    border: 1px solid #b1b1b1;
     position: fixed;  
     transform: translate(-50%,-50%);
     z-index: 999;
