@@ -98,6 +98,7 @@ main .introduction .contents .my_test dl dd {
 
 /*  skill */
 main .skill {
+    /* background-attachment: fixed ; */
     background-size: cover;
     background-image: url(../images/bg_0.jpg);
     background-position: center;
@@ -125,6 +126,63 @@ main .skill img {
     100%{background-position: 4000px;}
 }
 
+/* play_map */
+main .web_project{
+    background-image: url(../images/bg_3.jpg);
+    height: 100vh;
+    width: 100vw; text-align: center ;
+    padding-top: 70px;
+}
+main .web_project .contents {
+    padding-top: 50px; display: flex; flex-flow: row nowrap;
+    justify-content: center;
+}
+main .web_project .contents .web_img{
+    position: relative;
+}
+main .web_project .contents img {
+    width: 500px;
+}
+main .web_project .contents img:nth-of-type(2){
+    width: 390px;
+    position: absolute;
+    left: 40px; top: 80px;
+    border-top: 3px solid #000 ;
+}
+main .web_project .contents h1 {
+    font-size: 2rem;
+    position: absolute; left: 130px; top: 30px;
+}
+main .web_project .contents .web_img .text{
+    position: absolute;
+    display: flex; flex-flow: column nowrap;
+    bottom: 25px; left: 140px;
+    
+}
+main .web_project .contents .text span{
+    padding-bottom: 10px;
+}
+main .web_project .contents .text a{bottom: 15PX;
+        position: absolute; left: 270px;
+        color: #fff;
+        border-radius: 30%;
+        padding: 20px;
+        background: #3887ff;
+        opacity: 0.5;
+}
+main .web_project .contents .text a:hover{
+    opacity: 1;
+}
+main .last_contents {
+    height: 50vh; padding-top: 70px; text-align: center;
+}
+main .last_contents .tell{
+    display: flex; flex-flow: column;
+}
+
+main .last_contents h1 {
+    
+}
   /* .circle {
     width: 50px;
     height: 50px;
