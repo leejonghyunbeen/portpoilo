@@ -1,7 +1,11 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 html,body,* {
     box-sizing: border-box;
     html {font-family: 'Cute Font', sans-serif;
         font-family: 'Rowdies', sans-serif;}
+          
 }
 html,body,h1,h2,h3,h4,h5,h6,
 p,em,strong,a,span,sup,sub,del,q,blockquote,code,

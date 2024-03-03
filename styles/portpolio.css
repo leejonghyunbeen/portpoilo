@@ -1,7 +1,33 @@
+html,body {font-family:'Gamja Flower';
+    scroll-behavior: smooth;
+    cursor: none;
+}
+a{
+    cursor: none;
+}
 body{width: 100vw;}
 
+.left_nav {
+    z-index: 9998;
+    position: fixed; align-items: flex-end;
+    right:30px;top: 300px;
+    display: flex; flex-flow: column wrap;
+}
+.left_nav a:hover {
+    animation:turn 0.5s linear infinite alternate-reverse;
+}
+
+@keyframes turn {
+    0%{transform:rotate(0) ;}
+    100%{transform:rotate(15deg);}
+}
+
+.left_nav a img{
+    width: 70px;
+}
 .start_animation {
-    display: none;
+    overflow: hidden;
+    z-index: 9999;
     background-image: url(../images/ian-keefe-0BVkO0t6oCE-unsplash.jpg);
     position: fixed;
     width: 100%;
@@ -11,47 +37,70 @@ body{width: 100vw;}
     transition: transform 1s ease-in-out;
   }
   
-  video {
-    position: absolute;
+  .first_video{
+    position: relative;
     height: 100vh;
     width: 100%;
   }
-  
-  .start_animation .click {
-    font-size: 3rem;
-    width: 100%;
-    position: fixed;
-    left: 45%;
-    top: 88%;
+  .start_animation img {
+    width: 200px;
+    animation: rabbit 2s infinite alternate-reverse;
   }
-  
   .text_container {
     overflow: hidden;
-    width: 120px;
+    width: 400px;
     position: fixed;
     left: 20%; 
     top: 50%; 
   }
   
-  .start_animation span {
+  .start_animation .first_span {
     font-weight: bold;
     color: #a5a5a5;
     text-align: center;
     font-size: 3rem;
     position: fixed;
     top: 45%; 
-    left: 30%; 
+    left: 43%; 
     white-space: nowrap;
-    animation: marqueeAnimation 4s infinite alternate-reverse;
+    animation: marqueeAnimation 5s infinite alternate-reverse;
   }
-  
-  
+  .start_animation .second_span{
+    border-radius: 20px;
+    padding: 10px;
+    border: 3px solid #a5a5a5;
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    position: fixed;
+    top: 25%; 
+    left: 40%; 
+    animation: click 1s infinite alternate-reverse;
+  }
+  @keyframes rabbit {
+    0%{
+        transform:rotate(20deg);
+    }
+    100%{
+        transform:rotate(10deg);
+    }
+  }
+  @keyframes click {
+    0% {
+        opacity: 0;
+        
+      }
+      100% {
+        opacity: 1;
+      }
+  }
   @keyframes marqueeAnimation {
     0% {
-      transform: translateX(120%);
+      transform: scale(2) 
+      
     }
     100% {
-      transform: translateX(-20%);
+        transform:scale(0.5) 
     }
   }
   
@@ -94,6 +143,19 @@ main .introduction .contents .my_test dl dt{
 }
 main .introduction .contents .my_test dl dd {
     width: 50%; font-size: 2rem;
+    
+}
+
+
+.circle{
+    z-index: 99999;
+    width: 50px; height: 50px;
+    background-image: url(../images/rm261-nunny-12.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    position: fixed;  
+    transform: translate(-50%,-50%);
+    pointer-events: none;
 }
 
 /*  skill */
@@ -114,7 +176,7 @@ main .skill .img  {
 }
 main .skill .img .contents {
     width: calc(20% - 40px);
-    padding-top: 80px;
+    padding-top: 150px;
 }
 main .skill img {
     width: 100px; height: 100px;
@@ -131,58 +193,55 @@ main .web_project{
     background-image: url(../images/bg_3.jpg);
     height: 100vh;
     width: 100vw; text-align: center ;
-    padding-top: 70px;
-}
-main .web_project .contents {
-    padding-top: 50px; display: flex; flex-flow: row nowrap;
+    padding-top: 70px;  
     justify-content: center;
+    overflow: hidden;
 }
-main .web_project .contents .web_img{
-    position: relative;
+main .web_project .title {
+    text-align: center;
 }
-main .web_project .contents img {
-    width: 500px;
+main .web_project .benner_main {
 }
-main .web_project .contents img:nth-of-type(2){
-    width: 390px;
-    position: absolute;
-    left: 40px; top: 80px;
-    border-top: 3px solid #000 ;
+.benner_main .contents_box {
+    display: flex;
 }
-main .web_project .contents h1 {
-    font-size: 2rem;
-    position: absolute; left: 130px; top: 30px;
+
+main .web_project .benner_img img {
+    width: 700px;
 }
-main .web_project .contents .web_img .text{
-    position: absolute;
-    display: flex; flex-flow: column nowrap;
-    bottom: 25px; left: 140px;
-    
+main .web_project .benner_text {}
+main .web_project .benner_text h1 {font-size: 3rem;}
+main .web_project .benner_text p {font-size: 2rem; padding: 10px; }
+main .web_project .benner_text a {
+    padding: 8px;
+    font-size: 2rem; border: 2px solid orange;
+    border-radius: 20px;
 }
-main .web_project .contents .text span{
-    padding-bottom: 10px;
+main .web_project .benner_text a:hover{
+    background: orange;
+
 }
-main .web_project .contents .text a{bottom: 15PX;
-        position: absolute; left: 270px;
-        color: #fff;
-        border-radius: 30%;
-        padding: 20px;
-        background: #3887ff;
-        opacity: 0.5;
-}
-main .web_project .contents .text a:hover{
-    opacity: 1;
-}
+
+
+
 main .last_contents {
-    height: 50vh; padding-top: 70px; text-align: center;
+    background: linear-gradient(to right, #ffc6c9, #f8ff82);
+    height: 100vh; padding-top: 70px; text-align: center;
+    animation:background1 20s linear infinite ;
 }
 main .last_contents .tell{
     display: flex; flex-flow: column;
+    padding: 80px 0;
+}
+main .last_contents .tell span {
+    font-size: 2rem;
+}
+main .last_contents h2 {
+    font-size: 4rem;
+    padding-top: 250px;
 }
 
-main .last_contents h1 {
-    
-}
+
   /* .circle {
     width: 50px;
     height: 50px;
