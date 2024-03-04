@@ -59,7 +59,7 @@ window.addEventListener('scroll', function () {
     let scroll_text = window.scrollY;
 
     nav_a.forEach((target,index)=>{
-        if (scroll_text >= 910) {
+        if (scroll_text >= 870) {
             target.style.color = '#000';
             title_header.style.color = '#000'
         }
@@ -130,7 +130,10 @@ git.forEach((target,index)=>{
 //스와이프
 let slide = new Swiper('.benner_main',{
     slidesPerView: 1,
-    // autoplay:{delay:3000}
+    pagination:{
+        el:'.swiper-pagination'
+    }
+    // autoplay:{delay:3000}/
 })
 
 //텍스트

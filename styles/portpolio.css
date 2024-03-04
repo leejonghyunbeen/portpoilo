@@ -12,6 +12,8 @@ body {
 }
 
 
+
+
 body .header_title {
     position: fixed;
     left: 5%;
@@ -172,7 +174,7 @@ border-radius: 50%;
 background-size: cover;
 background-position: bottom;
 position: fixed;  
-transform: translate(-30%,-70%);
+transform: translate(-50%,-50%);
 pointer-events: none;
 transition: 0.1s;
 } 
@@ -236,28 +238,29 @@ position: relative;
 animation:background1 20s linear infinite alternate-reverse ;
 }
 main .web_project .title {
-text-align: center;
+padding-bottom: 100px;
 }
 main .web_project .benner_main {
+    position: relative;
 }
+
 .benner_main .contents_box {
-display: flex;
+
 }
 
 main .web_project .benner_img img {
-width: 700px;
+width: 500px;
 }
 main .web_project .benner_text {
     display: flex;
     flex-flow: column;
     width: 300px;
-    margin: 0 auto;
 }
 main .web_project  .show_text {
     border-radius: 10px;
     background: #fff9d6;
     padding: 20px;
-    position: absolute;right: 170px; bottom: -4px;
+    position: absolute;right: 10px; top: 0px;
 }
 main .web_project  .show_text img {
     position: absolute; left: 20px;
@@ -267,32 +270,34 @@ main .web_project  .show_text  dl {
     width: 500px; display: flex;  flex-flow: row wrap; 
     align-items: center; 
 }
+main .web_project  .show_text  dl  a {
+    padding: 0; font-size: 0.875rem;
+}
 main .web_project .show_text  dl dt{
     width: 45%; padding-bottom: 20px;}
 main .web_project .show_text  dl dd{width: 45%; padding-bottom: 20px;}
 main .web_project .benner_text h1 {font-size: 1.75rem;}
 main .web_project .benner_text div {
     font-size: 1.25rem; padding: 10px; 
-    border-bottom: 1px dashed #a5a5a5;
+    border-bottom: 1px solid #000;
     display: flex; flex-flow: row wrap; justify-content: space-around;
 }
 main .web_project .benner_text span {
     font-size: 1.25rem;padding: 10px; 
 }
-main .web_project .benner_text a {
+main .web_project .benner_text .final {
     font-size: 1.25rem;padding: 10px; 
+    transform: scale(0.9); transition: 0.5s;
 }
 main .web_project .benner_text .show_more{
     font-size: 0.825rem;
 }
-main .web_project .benner_text a:hover{
-    color: blue;
+main .web_project .benner_text .final a:hover{
+    transform: scale(1.2); transition: 0.5s;
 }
-main .web_project .benner_text a:hover{
-
-
+main .web_project .benner_contents {
+    display: flex; justify-content: center;
 }
-
 
 
 main .last_contents {

@@ -1,9 +1,9 @@
 
 
-@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 html,body,* {
     box-sizing: border-box;
-    html {font-family: 'Cute Font', sans-serif;
+    html {font-family: 'Nanum Gothic', sans-serif;
         font-family: 'Rowdies', sans-serif;}
           
 }
