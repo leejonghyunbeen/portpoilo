@@ -1,30 +1,22 @@
-html,body {font-family:'NanumSquare';
-scroll-behavior: smooth;
-cursor: none;
+html,body {
+    font-family:'NanumSquare';
+    scroll-behavior: smooth;
+/* cursor: none; */
 }
 a{
-cursor: none;
+/* cursor: none; */
 }
-body{width: 100vw;}
+
+body {
+    width: 100vw;
+}
 
 
-body .nav_bar{
-    z-index: 999;
-    position: fixed;
-    right: 50px; top: 80px;
-    animation: nav_var 3s infinite alternate-reverse;
-}
-body .nav_bar:hover{
-    animation: nav_hover 3s infinite alternate-reverse;
-}
 body .header_title {
     position: fixed;
     left: 5%;
     top: 40px;
     z-index: 9999;
-}
-body .header_title:hover{
-    animation: head_title 2s infinite alternate-reverse;
 }
 @keyframes head_title {
     0%{
@@ -33,77 +25,55 @@ body .header_title:hover{
 }
 @keyframes nav_hover {
     0%{
-        transform:rotate(360deg) scale(1.5) ;
+        transform:rotate(360deg) scale(1.4) ;
     }
 }
 body .header_title a {
     border-radius:10px;
     font-size: 2rem;
     padding: 10px 20px;
-}
-body .header_title a:hover{
-    background: #000;
     color: #fff;
-    
-}
-
-
-@keyframes nav_var {
-    0%{
-        transform: rotate(360deg)
-    }
 }
 .left_nav {
-overflow: hidden;
-width: 100vw;
-height: 100vh;
-background:rgba(0, 0, 0, 0.5);
-z-index: 99989;
-position: fixed; 
-right:0;top: 0px;
+    top: 40px;
+    z-index: 99989;
+    position: fixed; 
+    right: 100px;
 }
 .left_nav .nav_box{
-    background: #fff;
-    width: 50vw;
-    height: 100vh;
     display: flex; 
-    flex-flow: column;
+    flex-flow: row nowrap;
     justify-content: center;
 }
 .left_nav a {
-    padding: 60px 0;
-    color: #000;
-    text-align: center;
-    font-size: 3rem;
-}
-.left_nav .close{
-    margin-bottom: 10px;
-}
-.left_nav .close a img:hover {
-    transform: rotate(360deg);
-    transition: 1s;
-}
-.left_nav .close a img {
-    width: 30px;float: right;
-    margin-right: 100px;
-}
-
-.left_nav a:hover{
-    background: #000;
     color: #fff;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-right: 40px;
+    position: relative;
+    /* overflow: hidden; */
 }
-@keyframes turn {
-0%{transform:rotate(0) ;}
-100%{transform:rotate(15deg);}
+.left_nav a::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    width: 0; height: 3px;
+    display: inline-block;
+    background: #a5a5a5;
+    transition: 0.5s ease-in-out;
 }
+.left_nav a:hover::after {
+    width: 100%;
+  }
 
 .left_nav a img{
 width: 70px;
 }
 .start_animation {
-display: none;
+/* display: none; */
 overflow: hidden;
-z-index: 9999;
+z-index: 9998789;
 background: #000;
 position: fixed;
 width: 100%;
@@ -117,97 +87,58 @@ transition: transform 1s ease-in-out;
 position: relative;
 width: 100%;
 }
-.start_animation img {
-width: 200px;
-animation: rabbit 2s infinite alternate-reverse;
-}
+
 .text_container {
 overflow: hidden;
 width:100%;
-position: fixed;
+position: relative;
 left: 20%; 
 top: 50%; 
 }
-.text_container img {
-    margin-top: 100px;
-    margin-left:400px ;
-}
+
 .start_animation .first_span {
+border: 3px solid #a5a5a5;
+border-radius: 20px;
 font-weight: bold;
 color: #a5a5a5;
 text-align: center;
 font-size: 3rem;
 position: fixed;
-top: 45%; 
-left: 43%; 
+top: 55%; 
+left: 8%; 
 white-space: nowrap;
-animation: marqueeAnimation 5s infinite alternate-reverse;
-}
-.start_animation .second_span{
-border-radius: 20px;
-padding: 10px;
-border: 3px solid #a5a5a5;
-color: #fff;
-text-align: center;
-font-size: 3rem;
-position: fixed;
-top: 25%; 
-left: 40%; 
-animation: click 1s infinite alternate-reverse;
-}
-@keyframes rabbit {
-0%{
-    transform:rotate(20deg);
-}
-100%{
-    transform:rotate(10deg);
-}
+animation: click 2s infinite alternate-reverse;
 }
 @keyframes click {
-0% {
-    opacity: 0;
-    
-    }
-    100% {
-    opacity: 1;
-    }
-}
-@keyframes marqueeAnimation {
-0% {
-    transform: scale(2) 
-    
-}
-100% {
-    transform:scale(0.5) 
-}
+ 0%{transform: translateY(-10%);}
+ 100%{transform: translateY(30%);}
 }
 
 main .bg {
-    height: 100vh;
 }
 /* 메인 */
 main .introduction {
 width: 100vw;
 text-align: center;
-background:#FCF6F5;
+background:#000;
 background-position: center;
 background-size: cover;
 }
 main .introduction .character {
-    padding-top: 200px;
+    padding-top: 10px;
 }
-main .introduction .character p {
+main .introduction .character span {
+    color: #fff;
 padding-bottom: 10px;
 display: inline-block;
 padding-top: 30px;
 font-size: 2rem;
 font-weight: bold;
-border-bottom: 2px solid #a5a5a5;
 }
 
 main .title {
 font-size: 3rem;
-color: #7b9acc;
+color: #000
 }
 main .introduction .contents {
     display: flex; justify-content: center;
@@ -225,59 +156,80 @@ display: flex; flex-flow: row wrap; width: 500px;
 }
 main .introduction .contents .my_test dl dt{
 width: 50%; font-size: 2rem; padding-bottom: 30px;
-color: #7b9acc;
+color: #fff
 }
 main .introduction .contents .my_test dl dd {
 width: 50%; font-size: 2rem;
-color: #7b9acc;
+color: #fff;
 }
 
 
 .circle{
 z-index: 99999;
 width: 50px; height: 50px;
-background-image: url(../images/pen.png);
+border: 2px solid #a5a5a5;
 border-radius: 50%;
 background-size: cover;
 background-position: bottom;
 position: fixed;  
 transform: translate(-30%,-70%);
 pointer-events: none;
-}
+transition: 0.1s;
+} 
 
 /*  skill */
+
+
+
+
 main .skill {
-background-size: cover;
-background:#FBFBF7;
-background-position: center;
-padding-top: 70px;
-text-align: center;
+    background-size: cover;
+    background:#FBFBF7;
+    background-position: center;
+    padding-top: 70px;
+    text-align: center;
+}
+main .skill .title{
+    margin-bottom: 40px;
+}
+main .skill .text_box{
+    padding-top: 100px;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 21px;
 }
 main .skill .img  {
 justify-content: center;
 display: flex; flex-flow: row wrap;
+width: 600px;  margin: 0 auto;
+padding-top: 60px;
 }
 main .skill .img .contents {
-    width: calc(20% - 40px);
-    padding-top: 150px;
+    width: calc(25% - 40px);
 }
-main .skill .img .contents p {
-    color: #7b9acc;
+main .skill  p {
+    padding-top: 40px;
+    font-weight: 700;
+    font-size: 1.35rem;
 }
 main .skill img {
-width: 100px; height: 100px;
+width: 70px; height: 70px;
 border-radius: 20%;
 margin-bottom: 15px;
+transform: scale(0.9);
+transition: 0.7s;
 }
-@keyframes background1 {
-0%{background-position: 0;}
-100%{background-position: 4000px;}
+
+main .skill img:hover{
+    transform: scale(1.1);
+    transition: 0.7s;
 }
+
 /* play_map */
 main .web_project{
 background: linear-gradient(to right, #f1ecec, #FBFBF7);
 width: 100vw; text-align: center ;
-padding-top: 70px;  
 justify-content: center;
 overflow: hidden;
 position: relative;
@@ -344,32 +296,85 @@ main .web_project .benner_text a:hover{
 
 
 main .last_contents {
-background-image: url(../images/Untitled-1.png); text-align: center;
+    background: #000; text-align: center;
 background-size: cover;
 background-position: center ;
+position: relative;
+}
+main .last_contents h2 {
+    color: #fff;
 }
 main .last_contents .tell{
 display: flex; flex-flow: column;
 padding: 80px 0;
 }
+main .last_contents .tell img {
+    margin: 0 auto;
+    width: 200px;
+}
 main .last_contents .tell span {
-font-size: 2rem;
+    font-size: 2rem;
+    color: #fff;
+    padding-bottom: 20px;
+}
+main .last_contents .tell .qrcode {
+    border: 1px solid #fff;
+    display: flex; flex-flow: column;
+    margin: 0 auto;
+    width: 300px;
+    padding: 20px 0;
+    border-radius: 20px;
 }
 main .last_contents h2 {
 font-size: 4rem; padding-top: 250px;
 }
-main .last_contents h1 {
-    
+
+main .last_contents p {
+    font-size: 3rem;
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    background-image: url(../images/thank_you.png);
+    color: #000;
+    top:150px;
+    left: 100px;
+    animation: loop 50s infinite linear;
 }
 
-/* .circle {
-width: 50px;
-height: 50px;
-border-radius: 50%;
-border: 1px solid #b1b1b1;
-position: fixed;
-transform: translate(-50%, -50%);
-z-index: 999;
-pointer-events: none;
-transition: 0.1s;
-} */
+
+@keyframes loop {
+    0%{background-position-x:0}
+    100%{background-position-x:5000px}
+}
+main .last_contents form {
+    margin:  0 auto;
+    width: 700px;
+    display: flex; justify-content: center;
+    flex-flow: row wrap;
+}
+main .last_contents label {
+    color: #fff; font-size: 1.5rem;
+    padding-right: 10px;
+}
+main .last_contents input {
+    border-radius: 5px;
+    display: flex;
+    padding: 10px;
+    background: #fff;
+    margin-right: 30px;
+}
+main .last_contents .message_box{
+    padding-top: 30px;
+    align-items: center;
+    display: flex; flex-flow: column nowrap;
+}
+main .last_contents input:nth-of-type(2){
+    margin: 0;
+}
+main .last_contents .message_box input{
+    margin: 0 auto;
+    /* padding: 140px; */
+    width: 480px;
+    height: 140px;
+    margin: 0;
+}
