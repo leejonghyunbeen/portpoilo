@@ -1,256 +1,375 @@
-html,body {font-family:'Gamja Flower';
-    scroll-behavior: smooth;
-    cursor: none;
+html,body {font-family:'NanumSquare';
+scroll-behavior: smooth;
+cursor: none;
 }
 a{
-    cursor: none;
+cursor: none;
 }
 body{width: 100vw;}
 
-.left_nav {
-    z-index: 9998;
-    position: fixed; align-items: flex-end;
-    right:30px;top: 300px;
-    display: flex; flex-flow: column wrap;
-}
-.left_nav a:hover {
-    animation:turn 0.5s linear infinite alternate-reverse;
-}
 
-@keyframes turn {
-    0%{transform:rotate(0) ;}
-    100%{transform:rotate(15deg);}
+body .nav_bar{
+    z-index: 999;
+    position: fixed;
+    right: 50px; top: 80px;
+    animation: nav_var 3s infinite alternate-reverse;
 }
-
-.left_nav a img{
-    width: 70px;
+body .nav_bar:hover{
+    animation: nav_hover 3s infinite alternate-reverse;
 }
-.start_animation {
-    overflow: hidden;
+body .header_title {
+    position: fixed;
+    left: 5%;
+    top: 40px;
     z-index: 9999;
-    background-image: url(../images/ian-keefe-0BVkO0t6oCE-unsplash.jpg);
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    transition: transform 1s ease-in-out;
-  }
-  
-  .first_video{
-    position: relative;
-    height: 100vh;
-    width: 100%;
-  }
-  .start_animation img {
-    width: 200px;
-    animation: rabbit 2s infinite alternate-reverse;
-  }
-  .text_container {
-    overflow: hidden;
-    width: 400px;
-    position: fixed;
-    left: 20%; 
-    top: 50%; 
-  }
-  
-  .start_animation .first_span {
-    font-weight: bold;
-    color: #a5a5a5;
-    text-align: center;
-    font-size: 3rem;
-    position: fixed;
-    top: 45%; 
-    left: 43%; 
-    white-space: nowrap;
-    animation: marqueeAnimation 5s infinite alternate-reverse;
-  }
-  .start_animation .second_span{
-    border-radius: 20px;
-    padding: 10px;
-    border: 3px solid #a5a5a5;
-    color: #fff;
-    text-align: center;
-    font-size: 3rem;
-    position: fixed;
-    top: 25%; 
-    left: 40%; 
-    animation: click 1s infinite alternate-reverse;
-  }
-  @keyframes rabbit {
+}
+body .header_title:hover{
+    animation: head_title 2s infinite alternate-reverse;
+}
+@keyframes head_title {
     0%{
-        transform:rotate(20deg);
+        transform: scale(1.2);
     }
-    100%{
-        transform:rotate(10deg);
+}
+@keyframes nav_hover {
+    0%{
+        transform:rotate(360deg) scale(1.5) ;
     }
-  }
-  @keyframes click {
-    0% {
-        opacity: 0;
-        
-      }
-      100% {
-        opacity: 1;
-      }
-  }
-  @keyframes marqueeAnimation {
-    0% {
-      transform: scale(2) 
-      
-    }
-    100% {
-        transform:scale(0.5) 
-    }
-  }
-  
-
-  /* 메인 */
-  main .introduction {
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../images/ian-keefe-0BVkO0t6oCE-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-  }
- main .introduction .character {
-     padding-top: 40px;
- }
- main .introduction .character p {
-    padding-top: 30px;
-    font-size: 1.5rem;
- }
- main .title {
-    font-size: 3rem;
- }
- main .introduction .contents {
-     display: flex; justify-content: center;
-     padding-top: 100px;
- }
- main .introduction .contents .photo {}
- main .introduction .contents .photo img {
-    max-width: 300px; border-radius: 10%;
 }
-main .introduction .contents .my_test {
-    padding-top: 20px;
+body .header_title a {
+    border-radius:10px;
+    font-size: 2rem;
+    padding: 10px 20px;
 }
-main .introduction .contents .my_test dl {
-    display: flex; flex-flow: row wrap; width: 500px;
-}
-main .introduction .contents .my_test dl dt{
-    width: 50%; font-size: 2rem; padding-bottom: 30px;
-}
-main .introduction .contents .my_test dl dd {
-    width: 50%; font-size: 2rem;
+body .header_title a:hover{
+    background: #000;
+    color: #fff;
     
 }
 
 
+@keyframes nav_var {
+    0%{
+        transform: rotate(360deg)
+    }
+}
+.left_nav {
+overflow: hidden;
+width: 100vw;
+height: 100vh;
+background:rgba(0, 0, 0, 0.5);
+z-index: 99989;
+position: fixed; 
+right:0;top: 0px;
+}
+.left_nav .nav_box{
+    background: #fff;
+    width: 50vw;
+    height: 100vh;
+    display: flex; 
+    flex-flow: column;
+    justify-content: center;
+}
+.left_nav a {
+    padding: 60px 0;
+    color: #000;
+    text-align: center;
+    font-size: 3rem;
+}
+.left_nav .close{
+    margin-bottom: 10px;
+}
+.left_nav .close a img:hover {
+    transform: rotate(360deg);
+    transition: 1s;
+}
+.left_nav .close a img {
+    width: 30px;float: right;
+    margin-right: 100px;
+}
+
+.left_nav a:hover{
+    background: #000;
+    color: #fff;
+}
+@keyframes turn {
+0%{transform:rotate(0) ;}
+100%{transform:rotate(15deg);}
+}
+
+.left_nav a img{
+width: 70px;
+}
+.start_animation {
+display: none;
+overflow: hidden;
+z-index: 9999;
+background: #000;
+position: fixed;
+width: 100%;
+height: 100vh;
+background-size: cover;
+background-position: center;
+transition: transform 1s ease-in-out;
+}
+
+.first_video{
+position: relative;
+width: 100%;
+}
+.start_animation img {
+width: 200px;
+animation: rabbit 2s infinite alternate-reverse;
+}
+.text_container {
+overflow: hidden;
+width:100%;
+position: fixed;
+left: 20%; 
+top: 50%; 
+}
+.text_container img {
+    margin-top: 100px;
+    margin-left:400px ;
+}
+.start_animation .first_span {
+font-weight: bold;
+color: #a5a5a5;
+text-align: center;
+font-size: 3rem;
+position: fixed;
+top: 45%; 
+left: 43%; 
+white-space: nowrap;
+animation: marqueeAnimation 5s infinite alternate-reverse;
+}
+.start_animation .second_span{
+border-radius: 20px;
+padding: 10px;
+border: 3px solid #a5a5a5;
+color: #fff;
+text-align: center;
+font-size: 3rem;
+position: fixed;
+top: 25%; 
+left: 40%; 
+animation: click 1s infinite alternate-reverse;
+}
+@keyframes rabbit {
+0%{
+    transform:rotate(20deg);
+}
+100%{
+    transform:rotate(10deg);
+}
+}
+@keyframes click {
+0% {
+    opacity: 0;
+    
+    }
+    100% {
+    opacity: 1;
+    }
+}
+@keyframes marqueeAnimation {
+0% {
+    transform: scale(2) 
+    
+}
+100% {
+    transform:scale(0.5) 
+}
+}
+
+main .bg {
+    height: 100vh;
+}
+/* 메인 */
+main .introduction {
+width: 100vw;
+text-align: center;
+background:#FCF6F5;
+background-position: center;
+background-size: cover;
+}
+main .introduction .character {
+    padding-top: 200px;
+}
+main .introduction .character p {
+padding-bottom: 10px;
+display: inline-block;
+padding-top: 30px;
+font-size: 2rem;
+font-weight: bold;
+border-bottom: 2px solid #a5a5a5;
+}
+
+main .title {
+font-size: 3rem;
+color: #7b9acc;
+}
+main .introduction .contents {
+    display: flex; justify-content: center;
+    padding-top: 100px;
+}
+main .introduction .contents .photo {}
+main .introduction .contents .photo img {
+max-width: 300px; border-radius: 10%;
+}
+main .introduction .contents .my_test {
+padding-top: 20px;
+}
+main .introduction .contents .my_test dl {
+display: flex; flex-flow: row wrap; width: 500px;
+}
+main .introduction .contents .my_test dl dt{
+width: 50%; font-size: 2rem; padding-bottom: 30px;
+color: #7b9acc;
+}
+main .introduction .contents .my_test dl dd {
+width: 50%; font-size: 2rem;
+color: #7b9acc;
+}
+
+
 .circle{
-    z-index: 99999;
-    width: 50px; height: 50px;
-    background-image: url(../images/rm261-nunny-12.jpg);
-    border-radius: 50%;
-    background-size: cover;
-    position: fixed;  
-    transform: translate(-50%,-50%);
-    pointer-events: none;
+z-index: 99999;
+width: 50px; height: 50px;
+background-image: url(../images/pen.png);
+border-radius: 50%;
+background-size: cover;
+background-position: bottom;
+position: fixed;  
+transform: translate(-30%,-70%);
+pointer-events: none;
 }
 
 /*  skill */
 main .skill {
-    /* background-attachment: fixed ; */
-    background-size: cover;
-    background-image: url(../images/bg_0.jpg);
-    background-position: center;
-    padding-top: 70px;
-    height: 100vh;
-    background-repeat: repeat-x;
-    animation:background1 30s linear infinite ;
-    text-align: center;
+background-size: cover;
+background:#FBFBF7;
+background-position: center;
+padding-top: 70px;
+text-align: center;
 }
 main .skill .img  {
-    justify-content: center;
-    display: flex; flex-flow: row wrap;
+justify-content: center;
+display: flex; flex-flow: row wrap;
 }
 main .skill .img .contents {
     width: calc(20% - 40px);
     padding-top: 150px;
 }
+main .skill .img .contents p {
+    color: #7b9acc;
+}
 main .skill img {
-    width: 100px; height: 100px;
-    border-radius: 20%;
-    margin-bottom: 15px;
+width: 100px; height: 100px;
+border-radius: 20%;
+margin-bottom: 15px;
 }
 @keyframes background1 {
-    0%{background-position: 0;}
-    100%{background-position: 4000px;}
+0%{background-position: 0;}
+100%{background-position: 4000px;}
 }
-
 /* play_map */
 main .web_project{
-    background-image: url(../images/bg_3.jpg);
-    height: 100vh;
-    width: 100vw; text-align: center ;
-    padding-top: 70px;  
-    justify-content: center;
-    overflow: hidden;
+background: linear-gradient(to right, #f1ecec, #FBFBF7);
+width: 100vw; text-align: center ;
+padding-top: 70px;  
+justify-content: center;
+overflow: hidden;
+position: relative;
+animation:background1 20s linear infinite alternate-reverse ;
 }
 main .web_project .title {
-    text-align: center;
+text-align: center;
 }
 main .web_project .benner_main {
 }
 .benner_main .contents_box {
-    display: flex;
+display: flex;
 }
 
 main .web_project .benner_img img {
-    width: 700px;
+width: 700px;
 }
-main .web_project .benner_text {}
-main .web_project .benner_text h1 {font-size: 3rem;}
-main .web_project .benner_text p {font-size: 2rem; padding: 10px; }
+main .web_project .benner_text {
+    display: flex;
+    flex-flow: column;
+    width: 300px;
+    margin: 0 auto;
+}
+main .web_project  .show_text {
+    border-radius: 10px;
+    background: #fff9d6;
+    padding: 20px;
+    position: absolute;right: 170px; bottom: -4px;
+}
+main .web_project  .show_text img {
+    position: absolute; left: 20px;
+}
+main .web_project  .show_text  dl {
+    padding-top: 40px;
+    width: 500px; display: flex;  flex-flow: row wrap; 
+    align-items: center; 
+}
+main .web_project .show_text  dl dt{
+    width: 45%; padding-bottom: 20px;}
+main .web_project .show_text  dl dd{width: 45%; padding-bottom: 20px;}
+main .web_project .benner_text h1 {font-size: 1.75rem;}
+main .web_project .benner_text div {
+    font-size: 1.25rem; padding: 10px; 
+    border-bottom: 1px dashed #a5a5a5;
+    display: flex; flex-flow: row wrap; justify-content: space-around;
+}
+main .web_project .benner_text span {
+    font-size: 1.25rem;padding: 10px; 
+}
 main .web_project .benner_text a {
-    padding: 8px;
-    font-size: 2rem; border: 2px solid orange;
-    border-radius: 20px;
+    font-size: 1.25rem;padding: 10px; 
+}
+main .web_project .benner_text .show_more{
+    font-size: 0.825rem;
 }
 main .web_project .benner_text a:hover{
-    background: orange;
+    color: blue;
+}
+main .web_project .benner_text a:hover{
+
 
 }
 
 
 
 main .last_contents {
-    background: linear-gradient(to right, #ffc6c9, #f8ff82);
-    height: 100vh; padding-top: 70px; text-align: center;
-    animation:background1 20s linear infinite ;
+background-image: url(../images/Untitled-1.png); text-align: center;
+background-size: cover;
+background-position: center ;
 }
 main .last_contents .tell{
-    display: flex; flex-flow: column;
-    padding: 80px 0;
+display: flex; flex-flow: column;
+padding: 80px 0;
 }
 main .last_contents .tell span {
-    font-size: 2rem;
+font-size: 2rem;
 }
 main .last_contents h2 {
-    font-size: 4rem;
-    padding-top: 250px;
+font-size: 4rem; padding-top: 250px;
+}
+main .last_contents h1 {
+    
 }
 
-
-  /* .circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid #b1b1b1;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-    pointer-events: none;
-    transition: 0.1s;
-  } */
-  
+/* .circle {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+border: 1px solid #b1b1b1;
+position: fixed;
+transform: translate(-50%, -50%);
+z-index: 999;
+pointer-events: none;
+transition: 0.1s;
+} */
