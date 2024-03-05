@@ -35,9 +35,13 @@ body .header_title a {
     font-size: 2rem;
     padding: 10px 20px;
     color: #fff;
+    display: flex;
+}
+body .header_title a img {
+    width: 25px; margin-right: 10px;
 }
 .left_nav {
-    top: 40px;
+    top: 55px;
     z-index: 99989;
     position: fixed; 
     right: 100px;
@@ -76,7 +80,6 @@ width: 70px;
 /* display: none; */
 overflow: hidden;
 z-index: 9998789;
-background: #000;
 position: fixed;
 width: 100%;
 height: 100vh;
@@ -88,6 +91,7 @@ transition: transform 1s ease-in-out;
 .first_video{
 position: relative;
 width: 100%;
+opacity: 0.9;
 }
 
 .text_container {
