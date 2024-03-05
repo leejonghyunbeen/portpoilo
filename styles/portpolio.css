@@ -290,6 +290,19 @@ main .web_project  .show_text  dl  a {
 main .web_project .show_text  dl dt{
     width: 45%; padding-bottom: 20px;}
 main .web_project .show_text  dl dd{width: 45%; padding-bottom: 20px;}
+main .web_project .show_text  dl dt:nth-of-type(5){
+    width: 100%; font-size: 1.5rem;
+}
+main .web_project .show_text  dl dd:nth-of-type(5){
+    width: 50%; border: 3px solid #a5a5a5;
+    margin: 0 auto; 
+    border-radius: 20px;
+    padding: 10px 0;
+}
+main .web_project .show_text  dl dd:nth-of-type(5):hover{
+    background: #f1f1f1;
+}
+
 main .web_project .benner_text h1 {font-size: 1.75rem;}
 main .web_project .benner_text div {
     font-size: 1.25rem; padding: 10px; 

@@ -153,3 +153,10 @@ function typing(){
     }
 }
 setInterval(typing, 130)
+
+
+show_more[1].addEventListener('click',(e)=>{
+    e.preventDefault()
+    window.alert('제작중입니다.')
+    show_text[1].style.opacity = '0'
+})
