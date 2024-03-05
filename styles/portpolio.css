@@ -150,7 +150,7 @@ main .introduction .contents {
 }
 main .introduction .contents .photo {}
 main .introduction .contents .photo img {
-max-width: 300px; border-radius: 10%;
+max-width: 300px; border-radius: 10%; margin-right: 40px;
 }
 main .introduction .contents .my_test {
 padding-top: 20px;
@@ -166,6 +166,13 @@ main .introduction .contents .my_test dl dd {
 width: 60%; font-size: 2rem;
 color: #fff;
 }
+
+main .introduction .contents .my_test dl dt:nth-of-type(5){
+    font-size: 1.2rem; width: 100%;
+}
+main .introduction .contents .my_test dl dd:nth-of-type(5){
+    font-size: 1rem; width: 100%;
+}  
 
 
 .circle{
@@ -197,9 +204,8 @@ main .skill .title{
     margin-bottom: 40px;
 }
 main .skill .text_box{
-    padding-top: 100px;
+    padding-bottom: 50px;
     width: 400px;
-    height: 400px;
     margin: 0 auto;
     border-radius: 21px;
 }
@@ -254,12 +260,15 @@ main .web_project .benner_main {
 }
 
 main .web_project .benner_img img {
-width: 500px; margin-right: 250px;
+width: 900px; margin-right: 50px;
 }
 main .web_project .benner_text {
     display: flex;
     flex-flow: column;
     width: 300px;
+    border: 3px solid #000;
+    padding: 20px; 
+    border-radius: 20px;
 }
 main .web_project  .show_text {
     border-radius: 10px;
@@ -295,12 +304,17 @@ main .web_project .benner_text .final {
     transform: scale(0.9); transition: 0.5s;
 }
 main .web_project .benner_text .show_more{
-    font-size: 0.825rem;
+    font-size: 1.15rem;color: #a5a5a5;
+}
+main .web_project .benner_text .show_more:hover{
+    color: #000;
+    
 }
 main .web_project .benner_text .final a:hover{
     transform: scale(1.2); transition: 0.5s;
 }
 main .web_project .benner_contents {
+    align-items: center;
     display: flex; justify-content: center;
 }
 
