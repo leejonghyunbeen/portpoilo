@@ -67,7 +67,7 @@ body .header_title a {
 }
 .left_nav a:hover::after {
     width: 100%;
-  }
+}
 
 .left_nav a img{
 width: 70px;
@@ -99,21 +99,23 @@ top: 50%;
 }
 
 .start_animation .first_span {
-border: 3px solid #a5a5a5;
+border: 3px solid #000;
+background: #000;
 border-radius: 20px;
 font-weight: bold;
-color: #a5a5a5;
+color: #fff;
 text-align: center;
 font-size: 3rem;
 position: fixed;
 top: 55%; 
 left: 8%; 
 white-space: nowrap;
+padding: 7px 5px;
 animation: click 2s infinite alternate-reverse;
 }
 @keyframes click {
- 0%{transform: translateY(-10%);}
- 100%{transform: translateY(30%);}
+0%{transform: translateY(-10%);}
+100%{transform: translateY(30%);}
 }
 
 main .bg {
@@ -157,11 +159,11 @@ main .introduction .contents .my_test dl {
 display: flex; flex-flow: row wrap; width: 500px;
 }
 main .introduction .contents .my_test dl dt{
-width: 50%; font-size: 2rem; padding-bottom: 30px;
+width: 40%; font-size: 2rem; padding-bottom: 30px;
 color: #fff
 }
 main .introduction .contents .my_test dl dd {
-width: 50%; font-size: 2rem;
+width: 60%; font-size: 2rem;
 color: #fff;
 }
 
@@ -205,15 +207,15 @@ main .skill .img  {
 justify-content: center;
 display: flex; flex-flow: row wrap;
 width: 600px;  margin: 0 auto;
-padding-top: 60px;
+/* padding-top: 60px; */
 }
 main .skill .img .contents {
-    width: calc(25% - 40px);
+    width: calc(25% );
 }
 main .skill  p {
     padding-top: 40px;
     font-weight: 700;
-    font-size: 1.35rem;
+    font-size: 1.65rem;
 }
 main .skill img {
 width: 70px; height: 70px;
@@ -223,6 +225,9 @@ transform: scale(0.9);
 transition: 0.7s;
 }
 
+main .skill .text_box img {
+    width: 100px; height: 100px;
+}
 main .skill img:hover{
     transform: scale(1.1);
     transition: 0.7s;
@@ -249,7 +254,7 @@ main .web_project .benner_main {
 }
 
 main .web_project .benner_img img {
-width: 500px;
+width: 500px; margin-right: 250px;
 }
 main .web_project .benner_text {
     display: flex;
@@ -260,7 +265,7 @@ main .web_project  .show_text {
     border-radius: 10px;
     background: #fff9d6;
     padding: 20px;
-    position: absolute;right: 10px; top: 0px;
+    position: absolute;right: 700px; top: 0px;
 }
 main .web_project  .show_text img {
     position: absolute; left: 20px;
