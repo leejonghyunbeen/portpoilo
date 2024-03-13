@@ -28,7 +28,7 @@ start_animation.addEventListener('click',()=>{
 const wavve= document.querySelectorAll('.wavve_link')
 console.log(wavve)
 
-let fianal = ['http://eunsung00.dothome.co.kr/','https://calvinkleinkorea.netlify.app/']
+let fianal = ['https://yunaweb.pe.kr/wave_frontend24/#','https://calvinkleinkorea.netlify.app/']
 wavve.forEach((target,index)=>{
     target.addEventListener('click',(e)=>{
         e.preventDefault()
