@@ -12,10 +12,10 @@ const nav =document.querySelector('.left_nav')
 const nav_btn = document.querySelector('.nav_bar a')
 
 const start_animation = document.querySelector('.start_animation')
-const click = document.querySelector('.click')
-start_animation.addEventListener('click',()=>{
-    start_animation.style.transform = 'translateY(-100%)'
-})
+// const click = document.querySelector('.click')
+// start_animation.addEventListener('click',()=>{
+//     start_animation.style.transform = 'translateY(-100%)'
+// })
 
 
 
@@ -23,18 +23,6 @@ start_animation.addEventListener('click',()=>{
 
 
 
-
-
-const wavve= document.querySelectorAll('.wavve_link')
-console.log(wavve)
-
-let fianal = ['https://yunaweb.pe.kr/wave_frontend24/#','https://calvinkleinkorea.netlify.app/']
-wavve.forEach((target,index)=>{
-    target.addEventListener('click',(e)=>{
-        e.preventDefault()
-        window.open(fianal[index],'_blank')
-    })
-})
 
 
 const nav_a = document.querySelectorAll('.left_nav a')
@@ -67,7 +55,7 @@ window.addEventListener('scroll', function () {
             target.style.color = ''
             title_header.style.color = ''
         }
-        if(scroll_text >= 2719){
+        if(scroll_text >= 1319){
             target.style.color = '#fff';
             title_header.style.color = '#fff'
         }
@@ -92,70 +80,53 @@ skill_a.forEach((target,index)=>{
     })
 })
 
+let git_figma =['https://www.figma.com/file/d97P1f5xxpEmgM6TqXLsxs/2%EC%A1%B0-Wavve-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?type=design&node-id=374%3A813&mode=design&t=GXwnZEFb5zmLlabM-1','https://github.com/leejonghyunbeen/calvinklein']
 
+let web_site = ['https://yunaweb.pe.kr/wave_frontend24/#','https://calvinkleinkorea.netlify.app/']
+const git_link = document.querySelectorAll ('.git')
+const web_link =document.querySelectorAll('.web_link')
 
-const show_more = document.querySelectorAll('.show_more')
-const show_text = document.querySelectorAll('.show_text')
-const show_close = document.querySelectorAll('.show_text img')
-show_text.forEach((text,index)=>{
-    text.style.opacity = '0'
-    text.style.transition = 'opacity 0.4s ease-in-out';
-    show_more[index].addEventListener('click',(e)=>{
-        e.preventDefault()
-        text.style.opacity = '1'; 
-    })
-    console.log(show_close[index])
-    show_close[index].addEventListener('click',(e)=>{
-        text.style.opacity = '0'; 
-        e.preventDefault()
-    })
-})  
-let figma_link = ['https://www.figma.com/file/d97P1f5xxpEmgM6TqXLsxs/2%EC%A1%B0-Wavve-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?type=design&node-id=374%3A813&mode=design&t=GXwnZEFb5zmLlabM-1','https://www.figma.com/file/3FDA2pAGyLgLHFYWBmcoKA/Untitled?type=whiteboard&node-id=0%3A1&t=6w37zUq7cFU7v8ss-1']
-const figma = document.querySelectorAll('.planning')
-figma.forEach((target,index)=>{
+web_link.forEach((target,index)=>{
     target.addEventListener('click',(e)=>{
         e.preventDefault()
-        window.open(figma_link[index],'_blank')
+        window.open(web_site[index],'_blank')
     })
 })
-
-let git_link =['https://github.com/EunsungGIT/TeanProjectWavve.git','https://github.com/leejonghyunbeen/calvinklein']
-const git =document.querySelectorAll('.git_1')
-git.forEach((target,index)=>{
+git_link.forEach((target,index)=>{
     target.addEventListener('click',(e)=>{
-        window.open (git_link[index],'_blank')
+        e.preventDefault()
+        window.open(git_figma[index],'_blank')
     })
 })
-
 
 
 //스와이프
-let slide = new Swiper('.benner_main',{
+let slide = new Swiper('.project_box',{
     slidesPerView: 1,
     pagination:{
         el:'.swiper-pagination'
+    },    
+    navigation:{
+        nextEl:'.project_box .swiper-button-next',
+        prevEl:'.project_box .swiper-button-prev',
     }
+
     // autoplay:{delay:3000}/
 })
 
 //텍스트
 
-const content = "도전을 두려워하지않고 노력하며 쟁취하는성장형 신입 프론트앤드 입니다!";
+const content = " 소통을 좋아하고 도전을 즐기는 프론트엔드 이종현빈 입니다 :)";
 const text = document.querySelector(".text");
 let i = 0;
 
+
 function typing(){
-    let txt = content[i++];
+    if (i < content.length) {
+    let txt = content.charAt(i);
     text.innerHTML += txt;
-    if (i > content.length) {
-        text.textContent = "";
-        i = 0;
+    i++;
     }
 }
-setInterval(typing, 130)
+setInterval(typing, 100)
 
-
-show_more[1].addEventListener('click',(e)=>{
-    e.preventDefault()
-    show_text[1].style.opacity = '1'
-})

@@ -1,12 +1,10 @@
 
 
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 html,body,* {
     box-sizing: border-box;
-    html {font-family: 'Nanum Gothic', sans-serif;
-        font-family: 'Rowdies', sans-serif;}
-          
+    font-family: 'Noto Sans KR', sans-serif;     
 }
+
 html,body,h1,h2,h3,h4,h5,h6,
 p,em,strong,a,span,sup,sub,del,q,blockquote,code,
 ul,ol,li,dl,dd,dt,

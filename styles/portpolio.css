@@ -8,7 +8,7 @@ a{
 }
 
 body {
-    width: 100vw;
+    width: 100vw; 
 }
 
 
@@ -57,7 +57,6 @@ body .header_title a img {
     font-size: 1.25rem;
     margin-right: 40px;
     position: relative;
-    /* overflow: hidden; */
 }
 .left_nav a::after {
     position: absolute;
@@ -102,25 +101,6 @@ left: 20%;
 top: 50%; 
 }
 
-.start_animation .first_span {
-border: 3px solid #000;
-background: #000;
-border-radius: 47px;
-font-weight: bold;
-color: #fff;
-text-align: center;
-font-size: 2.3rem;
-position: fixed;
-top: 55%; 
-left: 8%; 
-white-space: nowrap;
-padding: 7px 47.2px;
-animation: click 2s infinite alternate-reverse;
-}
-@keyframes click {
-0%{transform: translateY(-10%);}
-100%{transform: translateY(30%);}
-}
 
 main .bg {
 }
@@ -128,55 +108,51 @@ main .bg {
 main .introduction {
 width: 100vw;
 text-align: center;
-background:#000;
+background-image: url(../images/ursa-major-ursa-minor-constellations.jpg);
+animation: loop 120s infinite linear; 
 background-position: center;
 background-size: cover;
+position: relative;
+}
+.mouse {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+}
+
+.mouse_cuser{
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 15px;
+    background: rgb(118 118 118);
+    position: absolute; right: 47.93%; top: 14px;
+    animation: mouse 1s infinite;
+}
+@keyframes mouse {
+    0%{transform: translateY(-3PX);}
+    100%{transform: translateY(5px);}
+}
+
+.mouse_background {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 55px;
+    border: 3px solid rgb(118 118 118);
+    border-radius: 15px 
 }
 main .introduction .character {
     padding-top: 10px;
 }
 main .introduction .character span {
-    color: #fff;
+    color: #98a3a5;
 padding-bottom: 10px;
 display: inline-block;
 padding-top: 30px;
 font-size: 2rem;
 font-weight: bold;
 }
-
-main .title {
-font-size: 3rem;
-color: #000
-}
-main .introduction .contents {
-    display: flex; justify-content: center;
-    padding-top: 100px;
-}
-main .introduction .contents .photo {}
-main .introduction .contents .photo img {
-max-width: 300px; border-radius: 10%; margin-right: 40px;
-}
-main .introduction .contents .my_test {
-padding-top: 20px;
-}
-main .introduction .contents .my_test dl {
-display: flex; flex-flow: row wrap; width: 500px;
-}
-main .introduction .contents .my_test dl dt{
-width: 40%; font-size: 2rem; padding-bottom: 30px;
-color: #fff
-}
-main .introduction .contents .my_test dl dd {
-width: 60%; font-size: 2rem;
-color: #fff;
-}
-
-main .introduction .contents .my_test dl dt:nth-of-type(5){
-    font-size: 1.2rem; width: 100%;
-}
-main .introduction .contents .my_test dl dd:nth-of-type(5){
-    font-size: 1rem; width: 100%;
-}  
 
 
 .circle{
@@ -199,13 +175,13 @@ transition: 0.1s;
 
 main .skill {
     background-size: cover;
-    background:#FBFBF7;
+    background:#ffffff;
     background-position: center;
-    padding-top: 70px;
     text-align: center;
 }
+
 main .skill .title{
-    margin-bottom: 40px;
+    margin-bottom: 40px; font-size: 2rem;
 }
 main .skill .text_box{
     padding-bottom: 50px;
@@ -225,7 +201,7 @@ main .skill .img .contents {
 main .skill  p {
     padding-top: 40px;
     font-weight: 700;
-    font-size: 1.65rem;
+    font-size: 1.25rem;
 }
 main .skill img {
 width: 70px; height: 70px;
@@ -244,96 +220,122 @@ main .skill img:hover{
 }
 
 /* play_map */
-main .web_project{
-background: linear-gradient(to right, #f1ecec, #FBFBF7);
-width: 100vw; text-align: center ;
-justify-content: center;
-overflow: hidden;
-position: relative;
-animation:background1 20s linear infinite alternate-reverse ;
+.web_project{
+    overflow-x: hidden;
+    background: #131313;
+     width: 100%; height: 100%; 
 }
-main .web_project .title {
-padding-bottom: 100px;
-}
-main .web_project .benner_main {
-    position: relative;
+.project_box {
+    margin: 0 auto;
+    width: 100%;  height: 70%;
+    padding: 5px 50px; 
+    border-radius: 30px;
+    overflow: hidden;
 }
 
-.benner_main .contents_box {
 
+.project_box  .box_wrap{
+    margin-top: 20px; display: flex;
+    justify-content: center;
+}
+.project_box  .box_wrap .left_img {
+    width: 600px ; height: 600px; 
+    overflow: hidden; border-radius: 10px;
+}
+.project_box  .box_wrap .left_img:hover img{
+    transform: translateY(-500px);
+}
+.project_box  .box_wrap .left_img:hover .calvin{
+    transform: translateY(-2200px);
+}
+.project_box  .box_wrap img {
+    
+    width: 600px;
+    height: auto; 
+    transition: transform 3s ease; 
+}
+.project_box  .box_wrap .calvin {
+    
+    transition: transform 7s ease; 
+}
+.right_text {
+    align-items: center;
+    margin-left: 250px;
+}
+.right_text  h2 {
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff; font-size: 2rem;
+    margin-bottom: 70px; color: #fff;
 }
 
-main .web_project .benner_img img {
-width: 900px; margin-right: 50px;
-}
-main .web_project .benner_text {
+.right_text  .p_text {
+    margin-top: 30px;
     display: flex;
-    flex-flow: column;
-    width: 300px;
-    border: 3px solid #000;
-    padding: 20px; 
-    border-radius: 20px;
-}
-main .web_project  .show_text {
-    border-radius: 10px;
-    background: #fff9d6;
-    padding: 20px;
-    position: absolute;right: 700px; top: 0px;
-}
-main .web_project  .show_text img {
-    position: absolute; left: 20px;
-}
-main .web_project  .show_text  dl {
-    padding-top: 40px;
-    width: 500px; display: flex;  flex-flow: row wrap; 
-    align-items: center; 
-}
-main .web_project  .show_text  dl  a {
-    padding: 0; font-size: 0.875rem;
-}
-main .web_project .show_text  dl dt{
-    width: 45%; padding-bottom: 20px;}
-main .web_project .show_text  dl dd{width: 45%; padding-bottom: 20px;}
-main .web_project .show_text  dl dt:nth-of-type(5){
-    width: 100%; font-size: 1.5rem;
-}
-main .web_project .show_text  dl dd:nth-of-type(5){
-    width: 50%; border: 3px solid #a5a5a5;
-    margin: 0 auto; 
-    border-radius: 20px;
-    padding: 10px 0;
-}
-main .web_project .show_text  dl dd:nth-of-type(5):hover{
-    background: #f1f1f1;
+    flex-flow: column nowrap; 
+    margin-bottom: 30px;
 }
 
-main .web_project .benner_text h1 {font-size: 1.75rem;}
-main .web_project .benner_text div {
-    font-size: 1.25rem; padding: 10px; 
-    border-bottom: 1px solid #000;
-    display: flex; flex-flow: row wrap; justify-content: space-around;
+.right_text  .link{
+    display: flex; flex-flow: row;
+    justify-content: space-between;
 }
-main .web_project .benner_text span {
-    font-size: 1.25rem;padding: 10px; 
+.right_text  .p_text p {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #fff;
 }
-main .web_project .benner_text .final {
-    font-size: 1.25rem;padding: 10px; 
-    transform: scale(0.9); transition: 0.5s;
+.right_text a {
+    border: 1px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    padding: 3px;
+    font-weight: 700;
+    color: #fff;
 }
-main .web_project .benner_text .show_more{
-    font-size: 1.15rem;color: #a5a5a5;
-}
-main .web_project .benner_text .show_more:hover{
+.right_text a:hover{
     color: #000;
+    background: #fff;
+    border: 1px solid #a5a5a5;
+    border-bottom: 3px solid #a5a5a5;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    display: none;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    display: none;
+}
+.project_box .prev{
+    position: absolute; left: 200px;
+    animation: slider 1.3s infinite alternate-reverse ;
+}
+.project_box .prev img{
     
 }
-main .web_project .benner_text .final a:hover{
-    transform: scale(1.2); transition: 0.5s;
+.project_box .next{
+    position: absolute; right: 200px;
+    animation: slider2 1.3s infinite alternate-reverse ;
 }
-main .web_project .benner_contents {
-    align-items: center;
-    display: flex; justify-content: center;
+@keyframes slider {
+    0%{transform: translateX(-6px);}
+    100%{transform: translateX(6px);}
 }
+@keyframes slider2 {
+    0%{transform: translateX(6px);}
+    100%{transform: translateX(-6px);}
+}
+
+
+
+
+
+
+
+
 
 
 main .last_contents {
@@ -381,7 +383,6 @@ main .last_contents p {
     left: 100px;
     animation: loop 50s infinite linear;
 }
-
 
 @keyframes loop {
     0%{background-position-x:0}
