@@ -104,11 +104,15 @@ top: 50%;
 
 main .bg {
 }
+
+
+
+
 /* 메인 */
 main .introduction {
+background-image: url(../images/Frame\ 1.png);
 width: 100vw;
 text-align: center;
-background-image: url(../images/ursa-major-ursa-minor-constellations.jpg);
 animation: loop 120s infinite linear; 
 background-position: center;
 background-size: cover;
@@ -146,15 +150,27 @@ main .introduction .character {
     padding-top: 10px;
 }
 main .introduction .character span {
-    color: #98a3a5;
-padding-bottom: 10px;
+    color: #fff;
+padding-bottom: 370px;
 display: inline-block;
 padding-top: 30px;
 font-size: 2rem;
 font-weight: bold;
 }
-
-
+.been_link {
+    position: absolute; top: 265px; right: 300px;
+    display: flex; align-items: center;
+    animation: slider2 1.3s infinite alternate-reverse;
+}
+.been_link img{
+    width: 70px;
+}
+.been_link p {
+    color: #fff;font-size: 2rem; 
+}
+.been_link p img{
+    width: 20px;
+}
 .circle{
 z-index: 99999;
 width: 50px; height: 50px;

@@ -17,7 +17,58 @@
     <link rel="stylesheet" href="./styles/jquery.fullPage.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 </head>
+<style>
+    .name_birthday{ 
+        background-color: #232121; width: 100vw; height: 100vh;
+        padding: 240px 150px; position: relative;
+    }
+    .rope {
+        position: absolute; right: 0; top: 0;
+        animation: rope 2s infinite alternate-reverse;
+    }
+    .rope img {width: 250px;}
+    .name_birthday .wrap {
+        display: flex;  width: 100%;
+         align-items: center; justify-content: center;
+    }
+    .name_birthday .wrap .left_photo{width: 25%; margin-right: 100px; }
+    .name_birthday .wrap .left_photo img{width: 100%; border-radius: 30px;}
+    .name_birthday .wrap .right_text{width: 50%; padding: 0px 0;}
+    .name_birthday .wrap .right_text .text h1{font-size: 3rem; color: #fff;font-weight: 700;margin-bottom: 100px ; }
+    .name_birthday .wrap .right_text .text P{font-size: 1.2rem; color: #ccc; line-height: 54px; font-weight: 700;}
+    .name_birthday .sub_img {
+        background-image: url(./images/Frame\ 2.png);
+        position: absolute; left: 100px; top: 60px; width: 4% ; height: 80vh ;
+        animation:my_page 60s infinite alternate-reverse ;
+    }
+    .name_birthday .sub_img img{
+        width: 80px;
+    }
+    @keyframes rope {
+        0%{transform: translateY(0);}
+        100%{transform: translateY(-50px);}
+    }
+    @keyframes my_page {
+    0%{background-position-y:5000px}
+    100%{background-position-y:0}
+}
+</style>
 <body>
-    
+    <div class="name_birthday">
+        <div class="sub_img">
+        </div>
+        <a href="#" class="rope"><img src="./images/—Pngtree—rope_1087050.png" alt="#"></a>
+        <div class="wrap">
+            <div class="left_photo">    
+                <img src="./images/KakaoTalk_20240303_170859219.jpg" alt="#">
+            </div>
+            <div class="right_text">
+                <div class="text">
+                    <h1>Front End</h1>
+                    <p>안녕하세요, 신입 프론트엔드&퍼블리셔 이종현빈입니다.<br>저는 1999.09.19년생이며 인천 부평구에 거주중입니다. 성격은 매우 밝으며 소통하는것을 즐깁니다.<br>저는 그린컴퓨터아트학원에서 AI를 이용한 반응형웹 프론트엔드 과정을 수료하였습니다.<br>저는 소통을 즐겨하는 성격 때문에 팀으로 협업하는것을 좋아합니다.<br> 저의 가장 큰 장점은 밝은 성격과 노력입니다!<br>틀리고 실수를 하더라도 좌절하지 않고 노력하며 배워서 같은실수를 두번하지 않게만들겠습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

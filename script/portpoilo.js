@@ -116,7 +116,7 @@ let slide = new Swiper('.project_box',{
 
 //텍스트
 
-const content = " 소통을 좋아하고 도전을 즐기는 프론트엔드 이종현빈 입니다 :)";
+const content = " 소통을 좋아하고 도전을 즐기는 프론트엔드 이종현빈 입니다.";
 const text = document.querySelector(".text");
 let i = 0;
 
