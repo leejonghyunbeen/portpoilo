@@ -129,4 +129,18 @@ function typing(){
     }
 }
 setInterval(typing, 100)
-
+// 내 정보
+const been_btn = document.querySelector('.been_link')
+const been_page =document.querySelector('.name_birthday')
+const rope = document.querySelector('.rope') 
+been_page.style.transform = "translateY(-3000px)"
+console.log(been_btn,been_page)
+been_btn.addEventListener('click',()=>{
+    been_page.style.transform = "translateY(0)"
+    been_page.style.transition = "2s"
+})
+rope.addEventListener('click',(e)=>{
+    e.preventDefault()
+    been_page.style.transform = "translateY(-3000px)"
+    been_page.style.transition = "2s"
+})

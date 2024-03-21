@@ -14,6 +14,61 @@ body {
 
 
 
+
+.name_birthday{ 
+    
+    background-color: #000000; width: 100vw; height: 100vh;
+    padding: 240px 150px; position: fixed; top: 0; left: 0; z-index: 9999999;
+}
+.rope {
+    position: absolute; right: 100px; top: 100px;
+    animation: rope 12s infinite alternate-reverse;
+}
+.rope img {width: 100px;}
+.name_birthday .wrap {
+    display: flex;  width: 100%;
+     align-items: center; justify-content: center;
+}
+.name_birthday .wrap .left_photo{width: 25%; }
+.name_birthday .wrap .left_photo img{width: 100%; border-radius: 30px;}
+.name_birthday .wrap .right_text{width: 50%; padding: 0px 0;}
+.name_birthday .wrap .right_text .text_main h1{font-size: 3rem; color: #fff;font-weight: 700;margin-bottom: 100px ; }
+.name_birthday .wrap .right_text .text_main P{font-size: 1.2rem; color: #ccc; line-height: 54px; font-weight: 700;}
+.name_birthday .sub_img {
+    background-image: url(../images/Frame2.png);
+    position: absolute; left: 100px; top: 60px; width: 4% ; height: 80vh ;
+    animation:my_page 60s infinite alternate-reverse ;
+}
+.name_birthday .sub_img img{
+    width: 80px;
+}
+@keyframes rope {
+    0%{transform:rotate(0)}
+    100%{transform: rotate(360deg)}
+}
+@keyframes my_page {
+0%{background-position-y:5000px}
+100%{background-position-y:0}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body .header_title {
     position: fixed;
     left: 5%;
@@ -158,7 +213,7 @@ font-size: 2rem;
 font-weight: bold;
 }
 .been_link {
-    position: absolute; top: 265px; right: 300px;
+    position: absolute; top: 190px; right: 250px;
     display: flex; align-items: center;
     animation: slider2 1.3s infinite alternate-reverse;
 }
@@ -276,7 +331,7 @@ main .skill img:hover{
 }
 .right_text {
     align-items: center;
-    margin-left: 250px;
+    margin-left: 150px;
 }
 .right_text  h2 {
     display: inline-block;
