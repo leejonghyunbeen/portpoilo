@@ -16,9 +16,13 @@ const start_animation = document.querySelector('.start_animation')
 // start_animation.addEventListener('click',()=>{
 //     start_animation.style.transform = 'translateY(-100%)'
 // })
-
-
-
+const introduction =document.querySelector('.introduction')
+const main_banner2 = document.querySelector('.main_banner2')
+window.addEventListener('scroll',()=>{
+    if(introduction.getBoundingClientRect().top <=900){
+   
+    }
+})
 
 
 
@@ -40,12 +44,12 @@ nav_a.forEach((obj,index)=>{
 
 
 
-
+const skill_all = document.querySelector('.skill')
+console.log(skill_all)
 const title_header = document.querySelector('.header_title a')
 window.addEventListener('scroll', function () {
     // 현재 스크롤 위치 가져오기
     let scroll_text = window.scrollY;
-
     nav_a.forEach((target,index)=>{
         if (scroll_text >= 870) {
             target.style.color = '#000';
@@ -139,6 +143,16 @@ been_btn.addEventListener('click',()=>{
     been_page.style.transform = "translateY(0)"
     been_page.style.transition = "2s"
 })
+been_btn.addEventListener('mouseover',(e)=>{
+    been_btn.style.transform = "translateY(-30px)"
+    been_btn.style.transition = "2s"
+
+})
+been_btn.addEventListener('mouseout',(e)=>{
+    been_btn.style.transform = "translateY(0)"
+    been_btn.style.transition = "2s"
+})
+
 rope.addEventListener('click',(e)=>{
     e.preventDefault()
     been_page.style.transform = "translateY(-3000px)"

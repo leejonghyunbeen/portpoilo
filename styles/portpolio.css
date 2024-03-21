@@ -56,19 +56,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 body .header_title {
     position: fixed;
     left: 5%;
@@ -130,49 +117,9 @@ body .header_title a img {
 .left_nav a img{
 width: 70px;
 }
-.start_animation {
-/* display: none; */
-overflow: hidden;
-z-index: 9998789;
-position: fixed;
-width: 100%;
-height: 100vh;
-background-size: cover;
-background-position: center;
-transition: transform 1s ease-in-out;
-}
-
-.first_video{
-position: relative;
-width: 100%;
-opacity: 0.9;
-}
-
-.text_container {
-overflow: hidden;
-width:100%;
-position: relative;
-left: 20%; 
-top: 50%; 
-}
-
-
-main .bg {
-}
 
 
 
-
-/* 메인 */
-main .introduction {
-background-image: url(../images/Frame\ 1.png);
-width: 100vw;
-text-align: center;
-animation: loop 120s infinite linear; 
-background-position: center;
-background-size: cover;
-position: relative;
-}
 .mouse {
     position: absolute;
     left: 50%;
@@ -201,6 +148,34 @@ position: relative;
     border: 3px solid rgb(118 118 118);
     border-radius: 15px 
 }
+
+
+
+
+
+/* 메인 */
+main .introduction {
+/* background-image: url(../images/Frame\ 1.png); */
+background: #000;
+width: 100vw;
+text-align: center;
+animation: loop 120s infinite linear; 
+background-position: center;
+background-size: cover;
+position: relative;
+}
+
+.main_banner2 {
+    color: #fff; font-size: 7rem; font-weight: bolder;
+    text-align: left;
+    padding-left: 120px;
+    padding-top: 200px;
+    animation: opacity_scale 3s ;
+}
+@keyframes opacity_scale {
+    0%{opacity: 0;   transform: translateX(-200px);}
+    100%{opacity: 1;    transform: translateX(0);}
+}
 main .introduction .character {
     padding-top: 10px;
 }
@@ -210,21 +185,39 @@ padding-bottom: 370px;
 display: inline-block;
 padding-top: 30px;
 font-size: 2rem;
-font-weight: bold;
+font-weight: bold; 
 }
 .been_link {
-    position: absolute; top: 190px; right: 250px;
+    position: absolute; top:30%; right: 250px;
     display: flex; align-items: center;
-    animation: slider2 1.3s infinite alternate-reverse;
+    animation: opacity_scale2 4s ; 
+    
+}
+@keyframes opacity_scale2 {
+    0%{opacity: 0;   transform: translateX(400px);}
+    100%{opacity: 1;  transform: translateX(0);}
+}
+.been_link:hover{
+    border: 3px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
 }
 .been_link img{
     width: 70px;
 }
 .been_link p {
-    color: #fff;font-size: 2rem; 
+    color: #fff;font-size: 4rem; 
 }
 .been_link p img{
-    width: 20px;
+    width: 35px;
+}
+.click_img {
+    position: absolute;
+    right:40%; top: 32%;
+    animation: opacity_scale2 2s ; 
+}
+.click_img img{
+    animation: slider2 1s infinite alternate-reverse ;
 }
 .circle{
 z-index: 99999;
