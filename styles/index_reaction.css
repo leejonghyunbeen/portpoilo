@@ -12,21 +12,79 @@
     .click_img {
         right: 55%;
     }
+    .name_birthday .wrap .right_text .text_main p {
+        line-height: 40px;
+        font-size: 1rem;
+    }
+    .name_birthday .wrap .right_text .text_main h1{
+        margin: 0;
+    }
+    .name_birthday .wrap .left_photo {
+        width: 35%;
+    }
+    .right_text{
+        margin-left: 65px;
+    }
 }
 @media screen  and (max-width:1200px) {
-/*     .left_nav .nav_box{
-        flex-flow: column nowrap;
-    }
-    .left_nav a {  
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        margin-right: 0;
-        margin-bottom: 40px;
-    }
-    .left_nav {
 
-    } */
     .click_img{
-        right: 60%;
+            right: 60%;
+        
+    }
+    .name_birthday .wrap .right_text{
+        width: 100%;
+    }
+    .name_birthday .wrap{
+        flex-flow: column;
+        align-items: baseline;
+    }
+    .project_box .box_wrap .left_img{
+        width: 450px;
+    }
+
+    .project_box  .box_wrap .left_img:hover img{
+        transform: translateY(-200px);
+        filter: grayscale(0) contrast(1);
+    }
+    .project_box  .box_wrap .left_img:hover .calvin{
+        transform: translateY(-1500px);
     }
 }
+@media screen  and (max-width:980px) {
+
+    .click_img{
+            right: 75%;
+        
+    }
+    .name_birthday .wrap .right_text .text_main p{
+        font: 0.775rem;
+    }
+}
+@media screen  and (max-width:800px) {
+    .project_box .box_wrap .left_img{
+        width: 400px;
+
+    }
+
+    .project_box  .box_wrap .left_img:hover img{
+        transform: translateY(-50px);
+        filter: grayscale(0) contrast(1);
+    }
+    .project_box  .box_wrap .left_img:hover .calvin{
+        transform: translateY(-1300px);
+    }
+}
+@media screen  and (max-width:730px) {
+
+    .click_img{
+        display: none;
+}
+    .project_box  .box_wrap .left_img:hover img{
+        transform: translateY(-1px);
+    }
+    .project_box  .box_wrap .left_img:hover .calvin{
+        transform: translateY(-1px);
+    }
+}
+

@@ -10,20 +10,57 @@ window.addEventListener('mousemove',(e)=>{
 //네비
 const nav =document.querySelector('.left_nav')
 const nav_btn = document.querySelector('.nav_bar a')
+const skill_all = document.querySelector('.skill')
+const bg_2_wrap = document.querySelector('.bg_2_wrap .text_box')
+const skill_contents = document.querySelectorAll('.skill_text .contents')
+const bg3 =document.querySelector('.web_project')
+const project_all =document.querySelector('.project_box')
 
-const start_animation = document.querySelector('.start_animation')
-// const click = document.querySelector('.click')
-// start_animation.addEventListener('click',()=>{
-//     start_animation.style.transform = 'translateY(-100%)'
-// })
-const introduction =document.querySelector('.introduction')
-const main_banner2 = document.querySelector('.main_banner2')
+console.log(skill_all)
+
+for(let i of skill_contents){
+    i.style.opacity = '0'
+    i.style.transform = "translateX(1000px)"
+    window.addEventListener('scroll',()=>{
+        if(skill_all.getBoundingClientRect().top <=900){
+            bg_2_wrap.style.transform = "translateX(0)"
+            bg_2_wrap.style.transition = "3s"
+            bg_2_wrap.style.opacity ='1'
+            i.style.opacity = '1'
+            i.style.transform = "translateX(0)"
+            i.style.transition = "4s"
+        }
+    })
+}
+bg_2_wrap.style.transform = "translateX(-1000px)"
+bg_2_wrap.style.opacity ='0'
+
+project_all.style.opacity = '0'
+
 window.addEventListener('scroll',()=>{
-    if(introduction.getBoundingClientRect().top <=900){
-   
+    if(bg3.getBoundingClientRect().top <=900){
+        project_all.style.opacity = '1'
+        project_all.style.transition = "5s"
     }
 })
 
+
+
+
+
+const left_nav = document.querySelector('.left_nav')
+const nav_bar =document.querySelector('.nav_bar')
+left_nav.style.display = 'none'
+let nav_result = true
+nav_bar.addEventListener('click',(e)=>{
+    nav_result = !nav_result
+    console.log(nav_result)
+    if(nav_result == false){
+        left_nav.style.display = 'block'
+    }else{
+        left_nav.style.display = 'none'
+    }
+})
 
 
 
@@ -39,32 +76,16 @@ nav_a.forEach((obj,index)=>{
         // nav.style.display='none'
         e.preventDefault()
         window.scrollTo(0,bg[`${index}`].offsetTop)
+        menu.classList.toggle("active");
+        left_nav.style.display = 'none'
+        nav_result = true
     })
 })
 
 
 
-const skill_all = document.querySelector('.skill')
-console.log(skill_all)
-const title_header = document.querySelector('.header_title a')
-window.addEventListener('scroll', function () {
-    // 현재 스크롤 위치 가져오기
-    let scroll_text = window.scrollY;
-    nav_a.forEach((target,index)=>{
-        if (scroll_text >= 870) {
-            target.style.color = '#fff';
-            title_header.style.color = '#fff'
-        }
-        else{
-            target.style.color = ''
-            title_header.style.color = ''
-        }
-        if(scroll_text >= 1319){
-            target.style.color = '#fff';
-            title_header.style.color = '#fff'
-        }
-    })
-});
+
+
 
 const skill_text = document.querySelector('.text_box p');
 const skill_a = document.querySelectorAll('.img .contents a');
@@ -113,30 +134,15 @@ let slide = new Swiper('.project_box',{
     navigation:{
         nextEl:'.project_box .swiper-button-next',
         prevEl:'.project_box .swiper-button-prev',
-    } ,   breakpoints:{
-        1400: {
-            spaceBetween:40
-        }
-    }
+    } ,
+    spaceBetween: 50
 
     // autoplay:{delay:3000}/
 })
 
 //텍스트
 
-const content = " 소통을 좋아하고 도전을 즐기는 프론트엔드 이종현빈 입니다.";
-const text = document.querySelector(".text");
-let i = 0;
 
-
-function typing(){
-    if (i < content.length) {
-    let txt = content.charAt(i);
-    text.innerHTML += txt;
-    i++;
-    }
-}
-setInterval(typing, 100)
 // 내 정보
 const been_btn = document.querySelector('.been_link')
 const been_page =document.querySelector('.name_birthday')
@@ -161,4 +167,9 @@ rope.addEventListener('click',(e)=>{
     e.preventDefault()
     been_page.style.transform = "translateY(-3000px)"
     been_page.style.transition = "2s"
+})
+
+const menu = document.querySelector(".menu");
+menu.addEventListener('click',()=>{
+    menu.classList.toggle("active");
 })
