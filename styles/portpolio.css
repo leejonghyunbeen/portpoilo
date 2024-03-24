@@ -32,13 +32,21 @@ body {
 .name_birthday .wrap .left_photo{width: 25%; }
 .name_birthday .wrap .left_photo img{width: 100%; border-radius: 30px;}
 .name_birthday .wrap .right_text{width: 50%; padding: 0px 0;}
-.name_birthday .wrap .right_text .text_main h1{font-size: 3rem; color: #fff;font-weight: 700;margin-bottom: 100px ; }
+.name_birthday .wrap .right_text .text_main h1{
+    font-size: 3rem; color: #fff;font-weight: 700;margin-bottom: 100px ; 
+    background:linear-gradient(to right,#000000,#ffffff,#000000,#ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    animation: text_bg 15s linear infinite;
+}
 .name_birthday .wrap .right_text .text_main P{font-size: 1.2rem; color: #ccc; line-height: 54px; font-weight: 700;}
 .name_birthday .sub_img {
     background-image: url(../images/Frame2.png);
     position: absolute; left: 100px; top: 60px; width: 4% ; height: 80vh ;
     animation:my_page 60s infinite alternate-reverse ;
 }
+
 .name_birthday .sub_img img{
     width: 80px;
 }
@@ -171,6 +179,7 @@ position: relative;
     padding-left: 120px;
     padding-top: 200px;
     animation: opacity_scale 3s ;
+    
 }
 @keyframes opacity_scale {
     0%{opacity: 0;   transform: translateX(-200px);}
@@ -188,7 +197,7 @@ font-size: 2rem;
 font-weight: bold; 
 }
 .been_link {
-    position: absolute; top:30%; right: 250px;
+    position: absolute; top:30%; right: 12%;
     display: flex; align-items: center;
     animation: opacity_scale2 4s ; 
     
@@ -239,13 +248,18 @@ transition: 0.1s;
 
 main .skill {
     background-size: cover;
-    background:#ffffff;
+    background:#000000;
     background-position: center;
     text-align: center;
 }
 
 main .skill .title{
-    margin-bottom: 40px; font-size: 2rem;
+    margin-bottom: 40px; font-size: 4rem; font-weight: 900;
+    color: #fff;
+}
+@keyframes text_bg {
+    0%{background-position-x: 100% ;}
+    100%{background-position-x: 400% ;}
 }
 main .skill .text_box{
     padding-bottom: 50px;
@@ -257,15 +271,16 @@ main .skill .img  {
 justify-content: center;
 display: flex; flex-flow: row wrap;
 width: 600px;  margin: 0 auto;
-/* padding-top: 60px; */
+padding-top: 60px;
 }
 main .skill .img .contents {
-    width: calc(25% );
+    width: calc(16% ); 
 }
 main .skill  p {
     padding-top: 40px;
     font-weight: 700;
     font-size: 1.25rem;
+    color: #fff;
 }
 main .skill img {
 width: 70px; height: 70px;
@@ -273,14 +288,20 @@ border-radius: 20%;
 margin-bottom: 15px;
 transform: scale(0.9);
 transition: 0.7s;
+background: #ffffff;    
+border: 5px solid #7c6e6e;
+filter: grayscale(0.6) contrast(0.5);
+padding: 4px;
 }
 
 main .skill .text_box img {
     width: 100px; height: 100px;
+    filter: grayscale(0) contrast(1);
 }
 main .skill img:hover{
     transform: scale(1.1);
     transition: 0.7s;
+    filter: grayscale(0) contrast(1);
 }
 
 /* play_map */
@@ -299,7 +320,7 @@ main .skill img:hover{
 
 
 .project_box  .box_wrap{
-    margin-top: 20px; display: flex;
+    margin-top: 75px; display: flex;
     justify-content: center;
 }
 .project_box  .box_wrap .left_img {
@@ -308,19 +329,20 @@ main .skill img:hover{
 }
 .project_box  .box_wrap .left_img:hover img{
     transform: translateY(-500px);
+    filter: grayscale(0) contrast(1);
 }
 .project_box  .box_wrap .left_img:hover .calvin{
     transform: translateY(-2200px);
 }
 .project_box  .box_wrap img {
-    
     width: 600px;
     height: auto; 
-    transition: transform 3s ease; 
+    transition:  3s ease; 
+    filter: grayscale(0.6) contrast(0.5);
 }
 .project_box  .box_wrap .calvin {
     
-    transition: transform 7s ease; 
+    transition:  7s ease; 
 }
 .right_text {
     align-items: center;

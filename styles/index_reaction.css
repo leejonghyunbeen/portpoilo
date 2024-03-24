@@ -1,0 +1,32 @@
+@media screen and (max-width:1400px){
+
+    .project_box .next {
+        left: 326px;
+        top: 172px;
+    }
+    .project_box .prev {
+        position: absolute;
+        left: 170px;
+        top: 172px;
+    }   
+    .click_img {
+        right: 55%;
+    }
+}
+@media screen  and (max-width:1200px) {
+/*     .left_nav .nav_box{
+        flex-flow: column nowrap;
+    }
+    .left_nav a {  
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    .left_nav {
+
+    } */
+    .click_img{
+        right: 60%;
+    }
+}
