@@ -20,7 +20,7 @@ console.log(skill_all)
 
 for(let i of skill_contents){
     i.style.opacity = '0'
-    i.style.transform = "translateX(1000px)"
+    i.style.transform = "translateX(-1000px)"
     window.addEventListener('scroll',()=>{
         if(skill_all.getBoundingClientRect().top <=900){
             bg_2_wrap.style.transform = "translateX(0)"
