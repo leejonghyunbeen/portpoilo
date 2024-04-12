@@ -5,6 +5,21 @@ window.addEventListener('mousemove',(e)=>{
     circle.style.top = `${e.clientY}px`
 }) 
 
+//스와이프
+let slide = new Swiper('.project_box',{
+    slidesPerView: 1,
+    pagination:{
+        el:'.swiper-pagination'
+    },    
+    navigation:{
+        nextEl:'.project_box .swiper-button-next',
+        prevEl:'.project_box .swiper-button-prev',
+    } ,
+    spaceBetween: 50
+
+    // autoplay:{delay:3000}/
+})
+
 
 
 //네비
@@ -125,20 +140,6 @@ git_link.forEach((target,index)=>{
 })
 
 
-//스와이프
-let slide = new Swiper('.project_box',{
-    slidesPerView: 1,
-    pagination:{
-        el:'.swiper-pagination'
-    },    
-    navigation:{
-        nextEl:'.project_box .swiper-button-next',
-        prevEl:'.project_box .swiper-button-prev',
-    } ,
-    spaceBetween: 50
-
-    // autoplay:{delay:3000}/
-})
 
 //텍스트
 
